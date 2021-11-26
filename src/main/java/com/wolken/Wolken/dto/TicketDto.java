@@ -2,6 +2,9 @@ package com.wolken.Wolken.dto;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.wolken.Wolken.entity.UserEntity;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -22,4 +25,6 @@ public class TicketDto {
 	private String productid;
 	private String status;
 	private String priority;
+	@JsonIgnoreProperties("ticketDto")
+	private UserEntity userEntity;
 }
